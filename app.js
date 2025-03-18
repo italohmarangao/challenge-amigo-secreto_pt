@@ -2,7 +2,7 @@
 
 let amigos = [];
 
-function adicionarAmigo() { // ajuste 1
+function adicionarAmigo() {
   let inputAmigo = document.getElementById("amigo");
   let nomeAmigo = inputAmigo.value;
 
@@ -12,12 +12,12 @@ function adicionarAmigo() { // ajuste 1
   }
   amigos.push(nomeAmigo);
   inputAmigo.value = "";
-  inputAmigo.focus(); // ajuste 2
+  inputAmigo.focus();
   atualizarlista();
 }
 
 function atualizarlista() {
-  let listaAmigos = document.getElementById("listaAmigos"); //ajuste 3
+  let listaAmigos = document.getElementById("listaAmigos");
   listaAmigos.innerHTML = "";
 
   for (let i = 0; i < amigos.length; i++) {
@@ -34,8 +34,8 @@ function sortearAmigo() {
   }
   let sorteado = amigos[Math.floor(Math.random() * amigos.length)];
   let resultado = document.getElementById("resultado");
-  resultado.innerHTML = `O amigo sorteado foi: ${sorteado}`; //ajuste 4
+  resultado.innerHTML = `O amigo sorteado foi: ${sorteado}`;
 
-  let limparLista = document.getElementById("listaAmigos");  //ajuste 5
+  let limparLista = document.getElementById("listaAmigos"); 
   limparlista.innerHTML = "";
 }
